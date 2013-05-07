@@ -1,5 +1,4 @@
 
-
 void Unfold()
 {
   Arm[port8] = 100;
@@ -25,8 +24,10 @@ void Score()
   wait1Msec(2300);//return conveyer to original position
 }
 
-task main()
+task autonomous()
 {
   Unfold();
   Score();
 }
+task drivercontrol()
+{}
