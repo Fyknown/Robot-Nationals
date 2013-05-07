@@ -1,3 +1,6 @@
+#pragma competitionControl(Competition)
+#pragma autonomousDuration(20)
+#pragma userControlDuration(120)
 
 void Unfold()
 {
