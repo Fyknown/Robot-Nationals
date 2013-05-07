@@ -5,10 +5,10 @@
 void Unfold()
 {
   Arm[port8] = 100;
-  wait1Msec(1000);
+  wait1Msec(1500);
   Conveyer1[port4] = 100;
   Conveyer2[port2] = 100;
-  wait1Msec(2357);
+  wait1Msec(5500);
 }//unfold the arm and extends the conveyer belt to full length.
 
 void Score()
