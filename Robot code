@@ -33,4 +33,9 @@ task autonomous()
   Score();
 }
 task drivercontrol()
-{}
+{
+  while(true)
+  {
+    UserControlCodePlaceholderForTesting();
+  }
+}
