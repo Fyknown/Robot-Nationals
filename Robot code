@@ -1,0 +1,32 @@
+
+
+void Unfold()
+{
+  Arm[port8] = 100;
+  wait1Msec(1000);
+  Conveyer1[port4] = 100;
+  Conveyer2[port2] = 100;
+  wait1Msec(2357);
+}//unfold the arm and extends the conveyer belt to full length.
+
+void Score()
+{
+  Left_Wheels[port7] = 100;
+  Right_Wheels[port6] = 100;
+  wait1Msec(1700);//move foward
+  Left_Wheels[port7] = 100;
+  Right_Wheels[port6] = -100;
+  wait1Msec(1350);//rotate 360 degrees
+  Line1[port3] = 100;
+  Line2[port5] = 100;
+  wait1Msec(2300);//start conveyer to score
+  Line1[port3] = -100;
+  Line2[port5] = -100;
+  wait1Msec(2300);//return conveyer to original position
+}
+
+task main()
+{
+  Unfold();
+  Score();
+}
